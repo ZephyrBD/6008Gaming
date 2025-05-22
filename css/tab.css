@@ -1,0 +1,156 @@
+.tab {
+    width: 100%;
+    margin: 100px auto;
+    margin-bottom: 0px;
+}
+
+.tab_list {
+    height: 40px;
+    background-color: #e5f6fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tab_list ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+
+.tab_list li {
+    float: left;
+    height: 39px;
+    line-height: 39px;
+    padding: 0 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.tab_list .current {
+    background-color: #0e9513;
+    color: #fff;
+}
+
+.item {
+    background-color: #e5f6fa;
+    display: none;
+}
+
+.leftbox,
+.rightbox,
+.midbox {
+    float: left;
+}
+
+.leftbox {
+    margin-right: 0;
+}
+
+.rightbox {
+    margin-right: 0;
+}
+
+.midbox {
+    width: 100%;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.midbox p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 50px;
+    color: #333;
+}
+
+.input-wrapper {
+    width: 100%;
+    max-width: 885px; /* 可根据需要调整最大宽度 */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* 让内部元素水平居中 */
+}
+
+#key {
+    padding: 20px 10px;
+    font-size: 50px;
+    width: 100%;
+    max-width: 885px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box;
+}
+
+#key:focus {
+    border-color: #007bff;
+}
+
+#eye {
+    height: 30px;
+    margin-left: -40px; /* 让图片贴近输入框 */
+    z-index: 1; /* 确保图片显示在输入框之上 */
+}
+
+#sm{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    width: 100%;
+    max-width: 100px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.item .leftbox img {
+    width: 20vw;
+    max-width: 500px;
+    transform: translateX(-15%);
+}
+
+.item .rightbox img {
+    width: 20vw;
+    max-width: 500px;
+    transform: translateX(15%);
+}
+
+@media (max-width: 800px) {
+    .midbox p
+    {
+        font-size: 30px;
+    }
+    #key
+    {
+        padding: 2px 3px;
+        font-size: 30px;
+        max-width: 360px;
+    }
+   .item .leftbox img,
+   .item .rightbox img {
+        width: 15vw;
+    }
+}
+
+@media (max-width: 600px) {
+    .midbox p
+    {
+        font-size: 10px;
+    }
+    #key
+    {
+        padding: 1px 2px;
+        font-size: 30px;
+        max-width: 360px;
+    }
+   .item .leftbox img,
+   .item .rightbox img {
+        width: 10vw;
+    }
+}

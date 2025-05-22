@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CUIT 6008 Gaming - 黑魂介绍</title>
+    <link rel="stylesheet" href="css/exam.css">
+    
+    <!-- 新增的头部资源 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* 自定义样式 */
+        :root {
+            --primary: #6b0d0d;
+            --secondary: #c89b3c;
+        }
+
+        /* 轮播图 */
+        .carousel {
+            height: 70vh;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .carousel-img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transition: opacity 1s;
+        }
+
+        .carousel-img.active {
+            opacity: 1;
+        }
+
+        /* 危机使命板块 */
+        .crisis-section {
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),
+                        url('texture.jpg');
+            background-size: cover;
+        }
+
+        /* Tab栏样式 */
+        .tab-btn {
+            padding: 1rem 2rem;
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s;
+        }
+
+        .tab-btn.active {
+            border-color: var(--secondary);
+            color: var(--secondary);
+        }
+
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.5s;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* 视频容器 */
+        .video-container {
+            aspect-ratio: 16/9;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* 自定义滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            background: #1a1a1a;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary);
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="site-name">6008 Gaming</div>
+        <div class="nav-links">
+            <a href="index.html">Minecraft</a>
+            <a href="xqtd.html">崩坏：星穹铁道</a>
+            <a href="qlwh.html">千恋万花</a>
+            <a href="wzry.html">王者荣耀</a>
+            <a href="wwqy.html">无畏契约</a>
+            <a href="sekiro.html">黑魂</a>
+        </div>
+    </div>
+    <!-- 新增内容（网页下部） -->
+    <div class="game-content bg-black text-gray-100">
+        <!-- 轮播图 -->
+        <div class="carousel">
+            <img src="images/狼.jpg" class="carousel-img active" alt="狼">
+            <img src="images/1.jpg" class="carousel-img" alt="苇名一心">
+            <img src="images/苇名弦一郎.jpg" class="carousel-img" alt="苇名弦一郎">
+            <img src="images/巨型忍者枭.jpg" class="carousel-img" alt="枭">
+            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black h-1/3"></div>
+        </div>
+
+        <!-- 危机与使命 -->
+        <section class="crisis-section py-20 px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-4xl font-bold mb-8 text-[#c89b3c]">血与钢的宿命</h2>
+                <div class="grid md:grid-cols-2 gap-8 text-lg">
+                    <div class="p-6 bg-black/50 rounded-lg">
+                        <h3 class="text-2xl mb-4">面临的危机</h3>
+                        <p>苇名国濒临陷落，龙胤之力引发各方争夺，不死诅咒蔓延，内府大军压境...</p>
+                    </div>
+                    <div class="p-6 bg-black/50 rounded-lg">
+                        <h3 class="text-2xl mb-4">狼的使命</h3>
+                        <p>作为御子的忍者，必须斩断不死、守护神子，在修罗之道与仁道间做出抉择...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 角色信息Tab栏 -->
+        <section class="py-16 px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="flex flex-wrap gap-4 justify-center mb-8">
+                    <button class="tab-btn active" data-tab="wolf">狼</button>
+                    <button class="tab-btn" data-tab="isshin">苇名一心</button>
+                    <button class="tab-btn" data-tab="genichiro">苇名弦一郎</button>
+                    <button class="tab-btn" data-tab="owl">枭</button>
+                </div>
+
+                <div class="tab-content active" id="wolf">
+                    <div class="bg-black/50 p-8 rounded-lg grid md:grid-cols-3 gap-6">
+                        <div>
+                            <h3 class="text-2xl text-[#c89b3c] mb-4">楔丸</h3>
+                            <p>传承自佛雕师的忍者刀，可格挡、突刺，配合义手忍具发挥强大战力</p>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl text-[#c89b3c] mb-4">性格特质</h3>
+                            <p>忠诚隐忍、意志坚定，在守护与杀戮间保持忍者之道</p>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl text-[#c89b3c] mb-4">背景故事</h3>
+                            <p>被遗弃的战争孤儿，由佛雕师收养训练，成为御子的专属忍者...</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="isshin">
+                    <div class="bg-black/50 p-8 rounded-lg grid md:grid-cols-3 gap-6">
+                        <div>
+                            <h3 class="text-2xl text-[#c89b3c] mb-4">传说之剑</h3>
+                            <p>曾使用名刀"初传"，后将其授予弦一郎，自己改用"巴之雷"长刀</p>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl text-[#c89b3c] mb-4">性格特质</h3>
+                            <p>霸气豪迈、重情重义，以一己之力奠定苇名百年基业</p>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl text-[#c89b3c] mb-4">背景故事</h3>
+                            <p>苇名国初代将军，被誉为"剑圣"，晚年身患重病仍心系国家存亡...</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="genichiro">
+                    <div class="bg-black/50 p-8 rounded-lg grid md:grid-cols-3 gap-6">
+                        <div>
+                            <h3 class="text-2xl text-[#c89b3c] mb-4">初传</h3>
+                            <p>继承自苇名一心的宝刀，融合巴流剑术与火药术，招式凌厉</p>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl text-[#c89b3c] mb-4">性格特质</h3>
+                            <p>孤傲果决、责任感强，为守护苇名不惜一切代价，甚至与狼为敌</p>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl text-[#c89b3c] mb-4">背景故事</h3>
+                            <p>苇名一心的孙子，苇名国末代将军继承人，试图通过龙胤之力拯救苇名...</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="owl">
+                    <div class="bg-black/50 p-8 rounded-lg grid md:grid-cols-3 gap-6">
+                        <div>
+                            <h3 class="text-2xl text-[#c89b3c] mb-4">忍者战术</h3>
+                            <p>精通各种忍者暗器与暗杀技巧，擅长使用烟雾弹、忍者镖等工具</p>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl text-[#c89b3c] mb-4">性格特质</h3>
+                            <p>老谋深算、冷酷无情，为达目的不择手段，视忍者之道为工具</p>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl text-[#c89b3c] mb-4">背景故事</h3>
+                            <p>狼的义父，真实身份是战国时代的顶级忍者"薄井右近左卫门"，野心勃勃...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 宣传视频 -->
+        <section class="py-16 px-4">
+            <div class="video-container">
+                <iframe 
+                    src="https://player.bilibili.com/player.html?bvid=BV14qAyeTEKb" 
+                    class="w-full h-full"
+                    allowfullscreen
+                    frameborder="0"
+                ></iframe>
+            </div>
+        </section>
+    </div>
+
+    <!-- 原始页脚 -->
+    <footer>
+        <p>© 2024 - 2025 CUIT 6008 | 保留所有权利</p>
+    </footer>
+
+    <!-- 新增脚本 -->
+    <script>
+        // 轮播图逻辑
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel-img');
+        
+        function cycleSlides() {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+        setInterval(cycleSlides, 5000);
+
+        // Tab切换逻辑
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                // 移除所有激活状态
+                document.querySelectorAll('.tab-btn, .tab-content').forEach(el => {
+                    el.classList.remove('active');
+                });
+                
+                // 设置当前激活
+                this.classList.add('active');
+                document.getElementById(this.dataset.tab).classList.add('active');
+            });
+        });
+
+        // 视频控制（示例）
+        const videoIframe = document.querySelector('iframe');
+        videoIframe.addEventListener('load', () => {
+            // 此处可添加视频控制逻辑
+        });
+    </script>
+</body>
+</html>

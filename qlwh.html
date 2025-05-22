@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CUIT 6008 Gaming - 千恋＊万花 - 角色介绍</title>
+    <style>
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background-color: #333;
+            color: white;
+        }
+        
+        .site-name {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #e8c4c4;
+        }
+        
+        body > img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            max-height: 300px;
+        }
+        
+        body > p {
+            padding: 1rem 2rem;
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            background-color: #333;
+            color: white;
+        }
+        
+        /* 千恋万花原有样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Microsoft YaHei', sans-serif;
+        }
+        
+        body {
+            background-color: #f9f3f0;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        header {
+            background-color: #e8c4c4;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-bottom: 2rem;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .carousel-container {
+            width: 80%;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .carousel {
+            display: flex;
+            transition: transform 0.5s ease;
+            height: 400px;
+        }
+        
+        .carousel img {
+            min-width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(255,255,255,0.5);
+            border: none;
+            color: #333;
+            font-size: 1.5rem;
+            padding: 1rem;
+            cursor: pointer;
+            z-index: 10;
+            border-radius: 50%;
+        }
+        
+        #prev {
+            left: 10px;
+        }
+        
+        #next {
+            right: 10px;
+        }
+        
+        .tabs {
+            width: 80%;
+            max-width: 900px;
+            margin: 0 auto 3rem;
+        }
+        
+        .tab-header {
+            display: flex;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .tab-btn {
+            padding: 1rem 2rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            flex: 1;
+            text-align: center;
+            color: #666;
+        }
+        
+        .tab-btn.active {
+            color: #e8c4c4;
+            border-bottom: 3px solid #e8c4c4;
+            font-weight: bold;
+        }
+        
+        .tab-content {
+            padding: 2rem;
+            background-color: white;
+            border-radius: 0 0 10px 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        .video-container {
+            width: 80%;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            text-align: center;
+        }
+        
+        .video-container h2 {
+            margin-bottom: 1.5rem;
+            color: #e8c4c4;
+        }
+        
+        .bilibili-container {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%; /* 16:9 宽高比 */
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            overflow: hidden;
+        }
+        
+        .bilibili-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            src:"https://player.bilibili.com/player.html?bvid=BV1L4421S7Kr&page=1&high_quality=1";
+        }
+    </style>
+</head>
+<body>
+    <!-- CUIT模板导航栏 -->
+    <div class="navbar">
+        <div class="site-name">6008 Gaming</div>
+        <div class="nav-links">
+            <a href="index.html">Minecraft</a>
+            <a href="xqtd.html">崩坏：星穹铁道</a>
+            <a href="qlwh.html">千恋万花</a>
+            <a href="wzry.html">王者荣耀</a>
+            <a href="wwqy.html">无畏契约</a>
+            <a href="sekiro.html">黑魂</a>
+        </div>
+    </div>
+    
+    <!-- CUIT模板横幅图 -->
+ 
+    
+    <!-- 千恋万花内容 -->
+    <header>
+        <h1>千恋＊万花</h1>
+        <p>与你相遇的奇迹，在这个樱花纷飞的小镇</p>
+    </header>
+    
+    <div class="carousel-container">
+        <div class="carousel">
+            <img src="images/丛雨.jpg" alt="丛雨">
+            <img src="images/芳乃.jpg" alt="芳乃">
+            <img src="images/茉子.jpg" alt="茉子">
+            <img src="images/蕾娜.jpg" alt="蕾娜">
+        </div>
+        <button class="carousel-btn" id="prev">❮</button>
+        <button class="carousel-btn" id="next">❯</button>
+    </div>
+    
+    <div class="tabs">
+        <div class="tab-header">
+            <button class="tab-btn active" data-tab="murasame">丛雨</button>
+            <button class="tab-btn" data-tab="yoshino">芳乃</button>
+            <button class="tab-btn" data-tab="mako">茉子</button>
+            <button class="tab-btn" data-tab="rena">蕾娜</button>
+        </div>
+        
+        <div id="murasame" class="tab-content active">
+            <h2>丛雨</h2>
+            <h3>性格</h3>
+            <p>活泼开朗，充满活力，总是能给周围的人带来欢乐。虽然有时候会有些冒失，但她的真诚和热情感染着每一个人。</p>
+            <h3>关系</h3>
+            <p>与主角是青梅竹马的关系，从小一起长大，彼此之间有着深厚的羁绊。</p>
+            <h3>爱好</h3>
+            <p>喜欢甜食，特别是草莓蛋糕。业余时间会去神社帮忙，也喜欢和朋友们一起逛街。</p>
+            <h3>故事</h3>
+            <p>丛雨是神社的巫女后代，肩负着守护小镇的职责。虽然她表面上总是笑嘻嘻的，但实际上内心有着不为人知的烦恼...</p>
+        </div>
+        
+        <div id="yoshino" class="tab-content">
+            <h2>芳乃</h2>
+            <h3>性格</h3>
+            <p>温柔体贴，善解人意，总是能为他人着想。有着成熟稳重的气质，是大家信赖的对象。</p>
+            <h3>关系</h3>
+            <p>是主角的学姐，在学校里很受欢迎，对主角特别照顾。</p>
+            <h3>爱好</h3>
+            <p>喜欢读书和泡茶，特别是日本茶道。闲暇时会去图书馆看书或是在茶室品茶。</p>
+            <h3>故事</h3>
+            <p>芳乃出身于当地的名门望族，从小接受严格的教育。她看似完美无缺，但实际上内心渴望挣脱束缚...</p>
+        </div>
+        
+        <div id="mako" class="tab-content">
+            <h2>茉子</h2>
+            <h3>性格</h3>
+            <p>冷静沉着，做事认真负责。外表看似冷漠，实则内心细腻温柔。</p>
+            <h3>关系</h3>
+            <p>是主角的同班同学，也是班上的班长，对主角有着特别的关注。</p>
+            <h3>爱好</h3>
+            <p>喜欢园艺和料理，特别是制作和果子。家里经营着一家和果子店。</p>
+            <h3>故事</h3>
+            <p>茉子为了继承家业而努力提升自己，但她内心其实有着与和果子无关的梦想...</p>
+        </div>
+        
+        <div id="rena" class="tab-content">
+            <h2>蕾娜</h2>
+            <h3>性格</h3>
+            <p>天真烂漫，充满好奇心。有时候会有些任性，但她的纯真让人无法生气。</p>
+            <h3>关系</h3>
+            <p>是主角的表妹，从国外转学回来，暂时寄住在主角家中。</p>
+            <h3>爱好</h3>
+            <p>喜欢拍照和收集可爱的东西，特别是布偶和饰品。</p>
+            <h3>故事</h3>
+            <p>蕾娜因为家庭原因来到日本，她对日本文化充满好奇，但在开朗的外表下隐藏着对远方家人的思念...</p>
+        </div>
+    </div>
+    
+    <div class="video-container">
+        <h2>千恋＊万花 宣传视频</h2>
+        <div class="bilibili-container">
+            <iframe src="https://player.bilibili.com/player.html?bvid=BV1L4421S7Kr&page=1&high_quality=1" 
+                    allowfullscreen="true" 
+                    scrolling="no" 
+                    frameborder="0" 
+                    style="border-radius: 10px;"
+                    allow="encrypted-media; fullscreen; picture-in-picture">
+            </iframe>
+        </div>
+    </div>
+    
+    <!-- CUIT模板页脚 -->
+    <footer>
+        <p>© 2024 - 2025 CUIT 6008 | 保留所有权利</p>
+    </footer>
+    
+    <script>
+        // 旋转木马功能
+        const carousel = document.querySelector('.carousel');
+        const prevBtn = document.getElementById('prev');
+        const nextBtn = document.getElementById('next');
+        let currentIndex = 0;
+        const images = document.querySelectorAll('.carousel img');
+        const totalImages = images.length;
+        
+        function updateCarousel() {
+            carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+        
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % totalImages;
+            updateCarousel();
+        });
+        
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+            updateCarousel();
+        });
+        
+        // 自动轮播
+        setInterval(() => {
+            currentIndex = (currentIndex + 1) % totalImages;
+            updateCarousel();
+        }, 3000);
+        
+        // 选项卡功能
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.tab-content');
+        
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // 移除所有active类
+                tabBtns.forEach(btn => btn.classList.remove('active'));
+                tabContents.forEach(content => content.classList.remove('active'));
+                
+                // 添加active类到当前按钮和对应内容
+                btn.classList.add('active');
+                const tabId = btn.getAttribute('data-tab');
+                document.getElementById(tabId).classList.add('active');
+                
+                // 切换到对应的轮播图
+                const tabIndex = Array.from(tabBtns).indexOf(btn);
+                currentIndex = tabIndex;
+                updateCarousel();
+            });
+        });
+    </script>
+</body>
+</html>

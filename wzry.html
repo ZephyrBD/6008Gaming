@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CUIT 6008 Gaming - 王者荣耀英雄专题</title>
+    <style>
+        /* 统一CSS样式框架 */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Microsoft YaHei", sans-serif;
+        }
+
+        .navbar {
+            background-color: rgba(255, 255, 255, 0.95);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .site-name {
+            font-size: 1.5rem; 
+            font-weight: bold;
+            color: #1a2a6c;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .nav-links a {
+            color: #718096;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: #b21f1f;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 1.25rem 2rem;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 0.5rem 0;
+            line-height: 1.6;
+        }
+
+        /* 原有页面样式 */
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #f0f0f0;
+            color: #333;
+            background-image: url('https://game.gtimg.cn/images/yxzj/img201606/skin/hero-info/105/105-bigskin-3.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 20px 40px; /* 顶部预留导航栏空间 */
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            flex-grow: 1;
+        }
+        
+        header {
+            text-align: center;
+            padding: 30px 0;
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+            color: white;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        
+        h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .carousel {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            overflow: hidden;
+            margin-bottom: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .carousel-inner {
+            display: flex;
+            transition: transform 0.5s ease;
+            height: 100%;
+        }
+        
+        .carousel-item {
+            min-width: 100%;
+            height: 100%;
+        }
+        
+        .carousel-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .carousel-control {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 15px;
+            cursor: pointer;
+            font-size: 20px;
+            z-index: 10;
+            border-radius: 50%;
+        }
+        
+        .carousel-control.prev {
+            left: 20px;
+        }
+        
+        .carousel-control.next {
+            right: 20px;
+        }
+        
+        .history-section {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 40px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .history-section h2 {
+            color: #b21f1f;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #b21f1f;
+            padding-bottom: 10px;
+        }
+        
+        .history-section p {
+            line-height: 1.8;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        
+        .tab-container {
+            margin-bottom: 40px;
+        }
+        
+        .tab-header {
+            display: flex;
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f);
+            border-radius: 10px 10px 0 0;
+            overflow: hidden;
+        }
+        
+        .tab-btn {
+            flex: 1;
+            padding: 15px 0;
+            text-align: center;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: none;
+            background: none;
+        }
+        
+        .tab-btn:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        
+        .tab-btn.active {
+            background-color: rgba(255, 255, 255, 0.3);
+            border-bottom: 3px solid #fdbb2d;
+        }
+        
+        .tab-content {
+            display: none;
+            padding: 30px;
+            background-color: white;
+            border-radius: 0 0 10px 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        .tab-content h3 {
+            color: #1a2a6c;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px dashed #ccc;
+        }
+        
+        .tab-content p {
+            line-height: 1.8;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            margin-bottom: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        @media (max-width: 768px) {
+            .carousel {
+                height: 250px;
+            }
+            
+            .tab-header {
+                flex-direction: column;
+            }
+            
+            .tab-btn {
+                padding: 10px;
+                font-size: 16px;
+            }
+            
+            .container {
+                padding-top: 60px; /* 缩小移动端导航栏间距 */
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <div class="navbar">
+        <div class="site-name">6008 Gaming</div>
+        <div class="nav-links">
+            <a href="index.html">Minecraft</a>
+            <a href="xqtd.html">崩坏：星穹铁道</a>
+            <a href="qlwh.html">千恋万花</a>
+            <a href="wzry.html">王者荣耀</a>
+            <a href="wwqy.html">无畏契约</a>
+            <a href="sekiro.html">黑魂</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1>王者荣耀英雄专题</h1>
+            <p>探索英雄的故事与传奇</p>
+        </header>
+        
+        <div class="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item">
+                    <img src="https://game.gtimg.cn/images/yxzj/img201606/skin/hero-info/193/193-bigskin-2.jpg" alt="凯-曙光守护者">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://game.gtimg.cn/images/yxzj/img201606/skin/hero-info/167/167-bigskin-1.jpg" alt="孙悟空-至尊宝">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://game.gtimg.cn/images/yxzj/img201606/skin/hero-info/150/150-bigskin-2.jpg" alt="韩信-街头霸王">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://game.gtimg.cn/images/yxzj/img201606/skin/hero-info/132/132-bigskin-1.jpg" alt="马可波罗-激情绿茵">
+                </div>
+            </div>
+            <button class="carousel-control prev">❮</button>
+            <button class="carousel-control next">❯</button>
+        </div>
+        
+        <div class="history-section">
+            <h2>王者荣耀发展历史</h2>
+            <p>王者荣耀是由腾讯游戏天美工作室群开发并运行的一款MOBA类手机游戏，于2015年11月26日正式公测。游戏最初名为《英雄战迹》，后更名为《王者荣耀》。</p>
+            <p>2016年，王者荣耀逐渐成为中国最受欢迎的手机游戏之一，日活跃用户突破1000万。2017年，游戏推出了"五五开黑节"等特色活动，进一步巩固了其市场地位。</p>
+            <p>2018年，王者荣耀国际版《Arena of Valor》在全球多个地区上线，标志着游戏开始走向国际化。同年，游戏加入了"边境突围"等新模式，丰富了游戏玩法。</p>
+            <p>2019年，王者荣耀推出了"王者模拟战"自走棋模式，并举办了首届世界冠军杯，总奖金高达1000万元人民币。</p>
+            <p>2020年至今，王者荣耀持续更新英雄、皮肤和游戏模式，保持着极高的人气，成为全球收入最高的手机游戏之一。</p>
+        </div>
+        
+        <div class="tab-container">
+            <div class="tab-header">
+                <button class="tab-btn active" data-tab="kai">凯-曙光守护者</button>
+                <button class="tab-btn" data-tab="monkey">孙悟空-至尊宝</button>
+                <button class="tab-btn" data-tab="hanxin">韩信-街头霸王</button>
+                <button class="tab-btn" data-tab="mark">马可波罗-激情绿茵</button>
+            </div>
+            
+            <div id="kai" class="tab-content active">
+                <h3>凯 - 曙光守护者</h3>
+                <p><strong>命途：</strong>凯是一位战士/坦克型英雄，拥有强大的生存能力和爆发伤害。他的技能组合使他在团战中既能承受大量伤害，又能对敌方后排造成威胁。</p>
+                <p><strong>背景故事：</strong>凯是长城守卫军的一员，肩负着守护边境的重任。曙光守护者皮肤展现了他作为光明使者的形象，象征着希望与力量。在黑暗中，他如同曙光般照亮前路，守护着战友和家园。</p>
+                <p>凯原本是魔道家族的天才，因家族被陷害而失去一切。在流亡途中被花木兰收留，成为长城守卫军的一员。他沉默寡言，但内心炽热，誓死守护这片土地。</p>
+            </div>
+            
+            <div id="monkey" class="tab-content">
+                <h3>孙悟空 - 至尊宝</h3>
+                <p><strong>命途：</strong>孙悟空是一位刺客/战士型英雄，以高机动性和爆发伤害著称。他的技能使他能够灵活穿梭于战场，对敌方后排造成致命打击。</p>
+                <p><strong>背景故事：</strong>至尊宝皮肤灵感来源于经典电影《大话西游》，讲述了孙悟空转世为至尊宝与紫霞仙子的爱情故事。这个皮肤完美融合了英雄特性与经典IP，深受玩家喜爱。</p>
+                <p>孙悟空本是天地孕育的石猴，拜师学艺后大闹天宫，被如来佛祖压在五行山下五百年。后护送唐僧西天取经，修成正果。游戏中他保留了桀骜不驯的性格和强大的战斗能力。</p>
+            </div>
+            
+            <div id="hanxin" class="tab-content">
+                <h3>韩信 - 街头霸王</h3>
+                <p><strong>命途：</strong>韩信是一位刺客型英雄，以极高的机动性和灵活的位移技能闻名。他擅长快速切入战场击杀敌方脆皮英雄，然后安全撤离。</p>
+                <p><strong>背景故事：</strong>街头霸王皮肤展现了韩信现代潮流的一面，将他塑造成街头篮球高手的形象。这个皮肤改变了韩信传统的古风造型，赋予他全新的现代风格。</p>
+                <p>历史上韩信是西汉开国功臣，著名的军事家。游戏中他保留了"兵仙"的称号，技能设计也体现了其用兵如神的特点。从默默无闻的小卒到叱咤风云的大将军，韩信的一生充满传奇色彩。</p>
+            </div>
+            
+            <div id="mark" class="tab-content">
+                <h3>马可波罗 - 激情绿茵</h3>
+                <p><strong>命途：</strong>马可波罗是一位射手型英雄，拥有远程持续输出能力和灵活的位移技能。他的真实伤害使他在面对坦克英雄时也能游刃有余。</p>
+                <p><strong>背景故事：</strong>激情绿茵皮肤将马可波罗塑造成足球运动员的形象，充满运动活力。这个皮肤完美结合了英雄特性与足球元素，技能特效也融入了足球主题。</p>
+                <p>马可波罗是历史上著名的威尼斯旅行家，曾沿丝绸之路来到中国。游戏中他保留了冒险家的身份，技能设计体现了他东西方文化交融的特点。他的故事充满了对未知世界的探索精神。</p>
+            </div>
+        </div>
+        
+        <div class="video-container">
+            <iframe src="https://www.bilibili.com/video/BV1G4411k73E?t=2.8&p=2" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <footer>
+        <p>© 2024 - 2025 CUIT 6008 | 保留所有权利</p>
+    </footer>
+
+    <script>
+        // 旋转木马功能
+        const carouselInner = document.querySelector('.carousel-inner');
+        const carouselItems = document.querySelectorAll('.carousel-item');
+        const prevBtn = document.querySelector('.carousel-control.prev');
+        const nextBtn = document.querySelector('.carousel-control.next');
+        const indicators = document.querySelectorAll('.carousel-indicator'); // 新增：指示器元素
+        let currentIndex = 0;
+        const itemCount = carouselItems.length;
+        let autoPlayInterval; // 新增：存储自动轮播的计时器
+
+        // 初始化轮播图
+        function initCarousel() {
+            // 设置初始位置
+            updateCarousel();
+            
+            // 启动自动轮播
+            startAutoPlay();
+            
+            // 添加指示器点击事件
+            if (indicators.length > 0) {
+                indicators.forEach((indicator, index) => {
+                    indicator.addEventListener('click', () => {
+                        goToSlide(index);
+                    });
+                });
+            }
+            
+            // 添加鼠标悬停暂停自动轮播
+            if (carouselInner) {
+                carouselInner.addEventListener('mouseenter', pauseAutoPlay);
+                carouselInner.addEventListener('mouseleave', startAutoPlay);
+            }
+        }
+
+        // 更新轮播图显示
+        function updateCarousel() {
+            // 移动轮播图
+            carouselInner.style.transform = `translateX(-${currentIndex * 100}%)`;
+            
+            // 更新指示器状态
+            updateIndicators();
+        }
+
+        // 更新指示器状态
+        function updateIndicators() {
+            if (indicators.length > 0) {
+                indicators.forEach((indicator, index) => {
+                    if (index === currentIndex) {
+                        indicator.classList.add('active');
+                    } else {
+                        indicator.classList.remove('active');
+                    }
+                });
+            }
+        }
+
+        // 切换到指定幻灯片
+        function goToSlide(index) {
+            currentIndex = index;
+            updateCarousel();
+            resetAutoPlay();
+        }
+
+        // 下一张
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % itemCount;
+            updateCarousel();
+            resetAutoPlay();
+        });
+
+        // 上一张
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + itemCount) % itemCount;
+            updateCarousel();
+            resetAutoPlay();
+        });
+
+        // 自动轮播
+        function startAutoPlay() {
+            // 先清除之前的计时器
+            pauseAutoPlay();
+            
+            // 设置新的计时器
+            autoPlayInterval = setInterval(() => {
+                currentIndex = (currentIndex + 1) % itemCount;
+                updateCarousel();
+            }, 5000); // 每5秒切换一次
+        }
+
+        // 暂停自动轮播
+        function pauseAutoPlay() {
+            clearInterval(autoPlayInterval);
+        }
+
+        // 重置自动轮播（点击按钮后重新开始计时）
+        function resetAutoPlay() {
+            pauseAutoPlay();
+            startAutoPlay();
+        }
+
+        // 初始化轮播图
+        document.addEventListener('DOMContentLoaded', initCarousel);
+   </script>
+</body>
