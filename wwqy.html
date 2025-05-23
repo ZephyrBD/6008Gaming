@@ -4,14 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/exam.css">
-    <title>CUIT 6008 Gaming - 无畏契约英雄档案</title>
+    <title>CUIT 6008 Gaming - 英雄档案</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
             background-color: #0f1923;
             color: #ece8e1;
             font-family: 'Arial', sans-serif;
+        }
+        .navbar {
+            background-color: #1a242d;
+            color: #ece8e1;
+            padding: 15px 0;
+        }
+        .site-name {
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: #ff4655;
+        }
+        .nav-links a {
+            color: #ece8e1;
+            text-decoration: none;
+            margin-left: 15px;
+        }
+        .nav-links a:hover {
+            color: #ff4655;
         }
         .hero-title {
             color: #ff4655;
@@ -67,238 +84,295 @@
             width: 100%;
             height: 100%;
         }
-        .navbar {
-            background-color: #1a242d;
-            color: #ece8e1;
-        }
-        .nav-links a {
-            color: #ece8e1;
-            text-decoration: none;
-            margin-left: 15px;
-        }
-        .nav-links a:hover {
-            color: #ff4655;
-        }
-        .site-name {
-            font-weight: bold;
-            font-size: 1.5rem;
-            color: #ff4655;
-        }
         footer {
             background-color: #1a242d;
             padding: 15px 0;
             margin-top: 30px;
+            text-align: center;
+        }
+        .intro-section {
+            text-align: center;
+            margin: 20px 0;
+            padding: 20px;
+            background-color: #1a242d;
+            border-radius: 5px;
         }
     </style>
 </head>
 
 <body>
-    <div class="navbar d-flex justify-content-between align-items-center p-3">
-        <div class="site-name">6008 Gaming</div>
-        <div class="nav-links">
-            <a href="index.html">Minecraft</a>
-            <a href="xqtd.html">崩坏：星穹铁道</a>
-            <a href="qlwh.html">千恋万花</a>
-            <a href="wzry.html">王者荣耀</a>
-            <a href="wwqy.html">无畏契约</a>
-            <a href="sekiro.html">黑魂</a>
+    <div class="navbar">
+        <div class="container d-flex justify-content-between align-items-center">
+			<div class="site-name">6008 Gaming</div>
+			<div class="nav-links">
+				<a href="index.html">Minecraft</a>
+				<a href="xqtd.html">崩坏：星穹铁道</a>
+				<a href="qlwh.html">千恋万花</a>
+				<a href="wzry.html">王者荣耀</a>
+				<a href="wwqy.html">无畏契约</a>
+				<a href="sekiro.html">黑魂</a>
+			</div>
+    </div>
         </div>
     </div>
     
-    
-    
-    <div class="container py-5">
-        <h1 class="text-center hero-title mb-5">无畏契约英雄档案</h1>
+    <div class="container">
         
-        <!-- 旋转木马图片展示 -->
-        <div id="heroCarousel" class="carousel slide mb-5" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="https://tse1-mm.cn.bing.net/th/id/OIP-C.AACoXgOBa5A3XYqcovnlcQAAAA?cb=iwp2&rs=1&pid=ImgDetMain" class="d-block w-100" alt="不死鸟">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>不死鸟</h5>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="https://tse2-mm.cn.bing.net/th/id/OIP-C.NKmDRK4AdbbFWT7Yt-WFhAHaEG?cb=iwp2&rs=1&pid=ImgDetMain" class="d-block w-100" alt="捷风">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>捷风</h5>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="https://tse4-mm.cn.bing.net/th/id/OIP-C._kWKvP9HAglEWb_lEHcR8gHaHa?cb=iwp2&rs=1&pid=ImgDetMain" class="d-block w-100" alt="贤者">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>贤者</h5>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="https://tse3-mm.cn.bing.net/th/id/OIP-C.soYNZzamvemEiellydPbDQAAAA?cb=iwp2&rs=1&pid=ImgDetMain" class="d-block w-100" alt="雷兹">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>雷兹</h5>
-                    </div>
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
+        <div class="intro-section">
+ 
+            <p>无畏契约(VALORANT)是一款由Riot Games开发的5v5战术射击游戏，以下是游戏中的英雄档案介绍</p>
         </div>
         
-        <!-- 不死鸟详情部分 -->
-        <div class="row mb-5">
-            <div class="col-md-4">
-                <img src="https://tse1-mm.cn.bing.net/th/id/OIP-C.AACoXgOBa5A3XYqcovnlcQAAAA?cb=iwp2&rs=1&pid=ImgDetMain" class="img-fluid rounded" alt="不死鸟">
-            </div>
-            <div class="col-md-8">
-                <h2 class="hero-title">不死鸟</h2>
-                <p class="lead">来自英国的决斗者，掌控火焰的战斗艺术家</p>
-                
-                <div class="quote-box">
-                    <p>"Watch this!"</p>
-                    <p>"Come on, let's go!"</p>
-                    <p>"I'm the best, you're the rest."</p>
-                </div>
-                
-                <div class="ultimate-voice">
-                    <h5>终极技能语音:</h5>
-                    <p>"Jokes over, you're dead!" (大招释放时)</p>
-                    <p>"Run it back!" (大招激活时)</p>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Tab栏切换 -->
-        <ul class="nav nav-tabs" id="heroTabs" role="tablist">
-            <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="phoenix-tab" data-bs-toggle="tab" data-bs-target="#phoenix" type="button" role="tab">不死鸟</button>
-            </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link" id="jett-tab" data-bs-toggle="tab" data-bs-target="#jett" type="button" role="tab">捷风</button>
-            </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link" id="sage-tab" data-bs-toggle="tab" data-bs-target="#sage" type="button" role="tab">贤者</button>
-            </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link" id="raze-tab" data-bs-toggle="tab" data-bs-target="#raze" type="button" role="tab">雷兹</button>
-            </li>
-        </ul>
-        <div class="tab-content" id="heroTabContent">
-            <!-- 不死鸟内容 -->
-            <div class="tab-pane fade show active" id="phoenix" role="tabpanel">
-                <h3>技能</h3>
-                <div class="d-flex align-items-center mb-3">
-                    <img src="https://olimg.3dmgame.com/uploads/images/raiders/2023/0330/1680154572505.png" class="skill-icon">
-                    <div>
-                        <h5>Q - 闪光曲球</h5>
-                        <p>投掷一颗会在空中转弯的闪光弹，引爆后会致盲所有看向它的玩家。</p>
-                    </div>
-                </div>
-                <div class="d-flex align-items-center mb-3">
-                    <img src="https://olimg.3dmgame.com/uploads/images/raiders/20230327/1679901320_335889.png" class="skill-icon">
-                    <div>
-                        <h5>E - 热力曲线</h5>
-                        <p>投掷一道火焰墙，对经过的敌人造成伤害并为不死鸟治疗。</p>
-                    </div>
-                </div>
-                <div class="d-flex align-items-center mb-3">
-                    <img src="https://olimg.3dmgame.com/uploads/images/raiders/2023/0330/1680154572245.png" class="skill-icon">
-                    <div>
-                        <h5>C - 火球</h5>
-                        <p>投掷一颗火球，爆炸后会在小范围内持续燃烧。</p>
-                    </div>
-                </div>
-                <div class="d-flex align-items-center mb-3">
-                    <img src="https://olimg.3dmgame.com/uploads/images/raiders/2023/0330/1680154572803.png" class="skill-icon">
-                    <div>
-                        <h5>X - 再来一次</h5>
-                        <p>标记当前位置，如果在大招持续时间内死亡或时间结束，将在标记位置满血复活。</p>
-                    </div>
-                </div>
-                
-                <h3 class="mt-4">背景故事</h3>
-                <p>不死鸟原名Jamie Adeyemi，来自英国伦敦。他的火焰能力源自一次实验事故，现在他将这种能力用于战斗艺术。他自信、张扬，喜欢在战斗中展现自己的风格。</p>
-                
-                <h3 class="mt-4">团队作用</h3>
-                <p>作为决斗者，不死鸟擅长突破敌方防线。他的技能组合可以创造进攻机会，而终极技能则提供了宝贵的第二次生命，使他成为团队冲锋陷阵的理想选择。</p>
-                
-                <!-- 不死鸟宣传视频 -->
-                <h3 class="mt-4">宣传视频</h3>
-                <div class="video-container">
-                    <iframe width="560" height="315" src="https://www.bilibili.com/video/BV19j411m7AR/" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-            </div>
+        <div class="container py-5">
+            <h1 class="text-center hero-title mb-5">无畏契约英雄档案</h1>
             
-            <!-- 捷风内容 -->
-            <div class="tab-pane fade" id="jett" role="tabpanel">
-                <h3>技能</h3>
-                <div class="d-flex align-items-center mb-3">
-                    <img src="https://media.9game.cn/gamebase/ieu-gdc-pre-process/images/20230821/12/28/fafc03e0576f8ec85dbda8637c563984.png" class="skill-icon">
-                    <div>
-                        <h5>Q - 顺风</h5>
-                        <p>立即向移动方向冲刺一小段距离。</p>
-                    </div>
-                </div>
-                <div class="d-flex align-items-center mb-3">
-                    <img src="https://olimg.3dmgame.com/uploads/images/raiders/2023/0330/1680156427408.png" class="skill-icon">
-                    <div>
-                        <h5>E - 上升气流</h5>
-                        <p>立即将捷风向上推进到空中。</p>
-                    </div>
-                </div>
-                <div class="d-flex align-items-center mb-3">
-                    <img src="https://olimg.3dmgame.com/uploads/images/raiders/20230327/1679898705_899787.png" class="skill-icon">
-                    <div>
-                        <h5>C - 烟幕</h5>
-                        <p>投掷一团短暂存在的烟幕，阻挡视线。</p>
-                    </div>
-                </div>
-                <div class="d-flex align-items-center mb-3">
-                    <img src="https://olimg.3dmgame.com/uploads/images/raiders/2023/0330/1680156427584.png" class="skill-icon">
-                    <div>
-                        <h5>X - 暴风刃</h5>
-                        <p>装备一组高精度飞刀，击杀敌人后自动补充。</p>
-                    </div>
-                </div>
-                
-                <h3 class="mt-4">背景故事</h3>
-                <p>捷风来自韩国，是一位敏捷的决斗者，能够利用风的力量在战场上快速移动。她的战斗风格快速而优雅，擅长利用地形优势。</p>
-                
-                <h3 class="mt-4">团队作用</h3>
-                <p>捷风是游戏中最机动的角色之一，擅长快速占据有利位置和侧翼包抄敌人。她的机动性使她成为团队中的先锋和游击手。</p>
-            </div>
-            
-            <!-- 贤者内容 -->
-            <div class="tab-pane fade" id="sage" role="tabpanel">
-                <h3>技能</h3>
-                <div class="d-flex align-items-center mb-3">
-                    <img src="https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt302fcb2b9628c376/5eb26f55ee7c2f1f0d5e9c5e/TX_Sage_Q.png" class="skill-icon">
-                    <div>
-                        <h5>Q - 减速法球</h5>
-                        <p>投掷一颗法球，爆炸后会在区域内制造减速场。</p>
-                    </div>
-                </div>
-                <div class="d-flex align-items-center mb-3">
-                    <img src="https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt100d13bfa8286a3d/5eb26f55f080be312c2aa120/TX_Sage_E.png" class="skill-icon">
-                    <div>
-                        <h5>E - 治疗法球</h5>
-                        <p>治疗自己或一名队友。</p>
-                    </div>
-                </div>
-                <div class="d-flex align-items-center mb-3">
-                    <img src="https://olimg.3dmgame.com/uploads/images/raiders/2023/0330/1680154469147.png" class="skill-icon">
-                    <div>
-                        <h5>C - 屏障法球</h5>
-                        <p>制造一面坚固的冰墙阻挡路径。</p>
+            <!-- 旋转木马图片展示 -->
+            <div id="heroCarousel" class="carousel slide mb-5" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://tse1-mm.cn.bing.net/th/id/OIP-C.AACoXgOBa5A3XYqcovnlcQAAAA?cb=iwp2&rs=1&pid=ImgDetMain" class="d-block w-100" alt="不死鸟">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>不死鸟</h5>
                         </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://tse2-mm.cn.bing.net/th/id/OIP-C.NKmDRK4AdbbFWT7Yt-WFhAHaEG?cb=iwp2&rs=1&pid=ImgDetMain" class="d-block w-100" alt="捷风">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>捷风</h5>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://tse4-mm.cn.bing.net/th/id/OIP-C._kWKvP9HAglEWb_lEHcR8gHaHa?cb=iwp2&rs=1&pid=ImgDetMain" class="d-block w-100" alt="贤者">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>贤者</h5>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://tse3-mm.cn.bing.net/th/id/OIP-C.soYNZzamvemEiellydPbDQAAAA?cb=iwp2&rs=1&pid=ImgDetMain" class="d-block w-100" alt="雷兹">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>雷兹</h5>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+            
+            <!-- 不死鸟详情部分 -->
+            <div class="row mb-5">
+                <div class="col-md-4">
+                    <img src="https://tse1-mm.cn.bing.net/th/id/OIP-C.AACoXgOBa5A3XYqcovnlcQAAAA?cb=iwp2&rs=1&pid=ImgDetMain" class="img-fluid rounded" alt="不死鸟">
+                </div>
+                <div class="col-md-8">
+                    <h2 class="hero-title">不死鸟</h2>
+                    <p class="lead">来自英国的决斗者，掌控火焰的战斗艺术家</p>
+                    
+                    <div class="quote-box">
+                        <p>"Watch this!"</p>
+                        <p>"Come on, let's go!"</p>
+                        <p>"I'm the best, you're the rest."</p>
+                    </div>
+                    
+                    <div class="ultimate-voice">
+                        <h5>终极技能语音:</h5>
+                        <p>"Jokes over, you're dead!" (大招释放时)</p>
+                        <p>"Run it back!" (大招激活时)</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tab栏切换 -->
+            <ul class="nav nav-tabs" id="heroTabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="phoenix-tab" data-bs-toggle="tab" data-bs-target="#phoenix" type="button" role="tab">不死鸟</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="jett-tab" data-bs-toggle="tab" data-bs-target="#jett" type="button" role="tab">捷风</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="sage-tab" data-bs-toggle="tab" data-bs-target="#sage" type="button" role="tab">贤者</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="raze-tab" data-bs-toggle="tab" data-bs-target="#raze" type="button" role="tab">雷兹</button>
+                </li>
+            </ul>
+            <div class="tab-content" id="heroTabContent">
+                <!-- 不死鸟内容 -->
+                <div class="tab-pane fade show active" id="phoenix" role="tabpanel">
+                    <h3>技能</h3>
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="https://olimg.3dmgame.com/uploads/images/raiders/2023/0330/1680154572505.png" class="skill-icon">
+                        <div>
+                            <h5>Q - 闪光曲球</h5>
+                            <p>投掷一颗会在空中转弯的闪光弹，引爆后会致盲所有看向它的玩家。</p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="https://olimg.3dmgame.com/uploads/images/raiders/20230327/1679901320_335889.png" class="skill-icon">
+                        <div>
+                            <h5>E - 热力曲线</h5>
+                            <p>投掷一道火焰墙，对经过的敌人造成伤害并为不死鸟治疗。</p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="https://olimg.3dmgame.com/uploads/images/raiders/2023/0330/1680154572245.png" class="skill-icon">
+                        <div>
+                            <h5>C - 火球</h5>
+                            <p>投掷一颗火球，爆炸后会在小范围内持续燃烧。</p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="https://olimg.3dmgame.com/uploads/images/raiders/2023/0330/1680154572803.png" class="skill-icon">
+                        <div>
+                            <h5>X - 再来一次</h5>
+                            <p>标记当前位置，如果在大招持续时间内死亡或时间结束，将在标记位置满血复活。</p>
+                        </div>
+                    </div>
+                    
+                    <h3 class="mt-4">背景故事</h3>
+                    <p>不死鸟原名Jamie Adeyemi，来自英国伦敦。他的火焰能力源自一次实验事故，现在他将这种能力用于战斗艺术。他自信、张扬，喜欢在战斗中展现自己的风格。</p>
+                    
+                    <h3 class="mt-4">团队作用</h3>
+                    <p>作为决斗者，不死鸟擅长突破敌方防线。他的技能组合可以创造进攻机会，而终极技能则提供了宝贵的第二次生命，使他成为团队冲锋陷阵的理想选择。</p>
+                    
+                    <!-- 不死鸟宣传视频 -->
+                    <h3 class="mt-4">宣传视频</h3>
+                    <div class="video-container">
+                        <iframe src="https://player.bilibili.com/player.html?isOutside=true&aid=445498808&bvid=BV19j411m7AR&cid=1181318918&p=1" scrolling="no" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+                    </div>
+                </div>
+                
+                <!-- 捷风内容 -->
+                <div class="tab-pane fade" id="jett" role="tabpanel">
+                    <h3>技能</h3>
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="https://media.9game.cn/gamebase/ieu-gdc-pre-process/images/20230821/12/28/fafc03e0576f8ec85dbda8637c563984.png" class="skill-icon">
+                        <div>
+                            <h5>Q - 顺风</h5>
+                            <p>立即向移动方向冲刺一小段距离。</p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="https://olimg.3dmgame.com/uploads/images/raiders/2023/0330/1680156427408.png" class="skill-icon">
+                        <div>
+                            <h5>E - 上升气流</h5>
+                            <p>立即将捷风向上推进到空中。</p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="https://olimg.3dmgame.com/uploads/images/raiders/20230327/1679898705_899787.png" class="skill-icon">
+                        <div>
+                            <h5>C - 烟幕</h5>
+                            <p>投掷一团短暂存在的烟幕，阻挡视线。</p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="https://olimg.3dmgame.com/uploads/images/raiders/2023/0330/1680156427584.png" class="skill-icon">
+                        <div>
+                            <h5>X - 暴风刃</h5>
+                            <p>装备一组高精度飞刀，击杀敌人后自动补充。</p>
+                        </div>
+                    </div>
+                    
+                    <h3 class="mt-4">背景故事</h3>
+                    <p>捷风来自韩国，是一位敏捷的决斗者，能够利用风的力量在战场上快速移动。她的战斗风格快速而优雅，擅长利用地形优势。</p>
+                    
+                    <h3 class="mt-4">团队作用</h3>
+                    <p>捷风是游戏中最机动的角色之一，擅长快速占据有利位置和侧翼包抄敌人。她的机动性使她成为团队中的先锋和游击手。</p>
+                </div>
+                
+                <!-- 贤者内容 -->
+                <div class="tab-pane fade" id="sage" role="tabpanel">
+                    <h3>技能</h3>
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt302fcb2b9628c376/5eb26f55ee7c2f1f0d5e9c5e/TX_Sage_Q.png" class="skill-icon">
+                        <div>
+                            <h5>Q - 减速法球</h5>
+                            <p>投掷一颗法球，爆炸后会在区域内制造减速场。</p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt100d13bfa8286a3d/5eb26f55f080be312c2aa120/TX_Sage_E.png" class="skill-icon">
+                        <div>
+                            <h5>E - 治疗法球</h5>
+                            <p>治疗自己或一名队友。</p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="https://olimg.3dmgame.com/uploads/images/raiders/2023/0330/1680154469147.png" class="skill-icon">
+                        <div>
+                            <h5>C - 屏障法球</h5>
+                            <p>制造一面坚固的冰墙阻挡路径。</p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="https://olimg.3dmgame.com/uploads/images/raiders/20230327/1679902205_126062.png" class="skill-icon">
+                        <div>
+                            <h5>X - 复活</h5>
+                            <p>复活一名阵亡的队友，使其满血重返战斗。</p>
+                        </div>
+                    </div>
+                    
+                    <h3 class="mt-4">背景故事</h3>
+                    <p>贤者来自中国，是一位能够操控生命能量的守护者。她的能力源自古老的神秘传统，能够治疗队友、阻挡敌人甚至逆转死亡。</p>
+                    
+                    <h3 class="mt-4">团队作用</h3>
+                    <p>作为游戏中主要的治疗者和支援角色，贤者是团队生存能力的核心。她的减速和屏障技能也能有效控制战场节奏，而终极技能可以扭转战局。</p>
+                </div>
+                
+                <!-- 雷兹内容 -->
+                <div class="tab-pane fade" id="raze" role="tabpanel">
+                    <h3>技能</h3>
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt100d13bfa8286a3d/5eb26f55f080be312c2aa120/TX_Raze_Q.png" class="skill-icon">
+                        <div>
+                            <h5>Q - 爆破机器人</h5>
+                            <p>部署一个会直线移动的机器人，碰到敌人会爆炸。</p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt158572ec37653cf3/5eb26f54402b8b4d13a56656/TX_Raze_E.png" class="skill-icon">
+                        <div>
+                            <h5>E - 爆破包</h5>
+                            <p>投掷一个爆破包，可以附着在表面上，再次使用会引爆。</p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt8a627ec10b57f4f2/5eb26f542f5dc726a5a6eac3/TX_Raze_C.png" class="skill-icon">
+                        <div>
+                            <h5>C - 手雷</h5>
+                            <p>投掷一枚手雷，造成范围伤害。</p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt302fcb2b9628c376/5eb26f55ee7c2f1f0d5e9c5e/TX_Raze_X.png" class="skill-icon">
+                        <div>
+                            <h5>X - 火箭发射器</h5>
+                            <p>装备一台火箭发射器，发射一枚会造成大范围高伤害的火箭。</p>
+                        </div>
+                    </div>
+                    
+                    <h3 class="mt-4">背景故事</h3>
+                    <p>雷兹来自巴西，是一位热爱爆炸物的工程师。她将工程技术与战斗艺术结合，创造了一系列爆炸性武器，以压倒性的火力压制敌人。</p>
+                    
+                    <h3 class="mt-4">团队作用</h3>
+                    <p>雷兹是游戏中最具破坏力的角色之一，擅长区域控制和清理敌方据点。她的爆炸物可以迫使敌人离开掩体，为团队创造进攻机会。</p>
                 </div>
             </div>
         </div>
     </div>
+
     <footer>
         <p>© 2024 - 2025 CUIT 6008 | 保留所有权利</p>
     </footer>
+
+    <script src="js/wwqy.js">
+    </script>
 </body>
+</html>

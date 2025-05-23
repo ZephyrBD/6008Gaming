@@ -5,11 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CUIT 6008 Gaming - 王者荣耀英雄专题</title>
     <style>
-        /* 统一CSS样式框架 */
+        /* !---统一CSS样式 */
         body {
             margin: 0;
             padding: 0;
-            font-family: "Microsoft YaHei", sans-serif;
         }
 
         .navbar {
@@ -60,10 +59,12 @@
             margin: 0.5rem 0;
             line-height: 1.6;
         }
+        /* !---统一CSS样式 */
 
         /* 原有页面样式 */
         * {
             box-sizing: border-box;
+            font-family: "Microsoft YaHei", sans-serif;
         }
         
         body {
@@ -355,7 +356,7 @@
         </div>
         
         <div class="video-container">
-            <iframe src="https://www.bilibili.com/video/BV1G4411k73E?t=2.8&p=2" allowfullscreen></iframe>
+            <iframe src="https://player.bilibili.com/player.html?isOutside=true&aid=65212819&bvid=BV1G4411k73E&cid=1422551765&p=2" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
         </div>
     </div>
 
@@ -370,102 +371,46 @@
         const carouselItems = document.querySelectorAll('.carousel-item');
         const prevBtn = document.querySelector('.carousel-control.prev');
         const nextBtn = document.querySelector('.carousel-control.next');
-        const indicators = document.querySelectorAll('.carousel-indicator'); // 新增：指示器元素
         let currentIndex = 0;
         const itemCount = carouselItems.length;
-        let autoPlayInterval; // 新增：存储自动轮播的计时器
-
-        // 初始化轮播图
-        function initCarousel() {
-            // 设置初始位置
-            updateCarousel();
-            
-            // 启动自动轮播
-            startAutoPlay();
-            
-            // 添加指示器点击事件
-            if (indicators.length > 0) {
-                indicators.forEach((indicator, index) => {
-                    indicator.addEventListener('click', () => {
-                        goToSlide(index);
-                    });
-                });
-            }
-            
-            // 添加鼠标悬停暂停自动轮播
-            if (carouselInner) {
-                carouselInner.addEventListener('mouseenter', pauseAutoPlay);
-                carouselInner.addEventListener('mouseleave', startAutoPlay);
-            }
-        }
-
-        // 更新轮播图显示
+        
         function updateCarousel() {
-            // 移动轮播图
             carouselInner.style.transform = `translateX(-${currentIndex * 100}%)`;
-            
-            // 更新指示器状态
-            updateIndicators();
         }
-
-        // 更新指示器状态
-        function updateIndicators() {
-            if (indicators.length > 0) {
-                indicators.forEach((indicator, index) => {
-                    if (index === currentIndex) {
-                        indicator.classList.add('active');
-                    } else {
-                        indicator.classList.remove('active');
-                    }
-                });
-            }
-        }
-
-        // 切换到指定幻灯片
-        function goToSlide(index) {
-            currentIndex = index;
-            updateCarousel();
-            resetAutoPlay();
-        }
-
-        // 下一张
+        
         nextBtn.addEventListener('click', () => {
             currentIndex = (currentIndex + 1) % itemCount;
             updateCarousel();
-            resetAutoPlay();
         });
-
-        // 上一张
+        
         prevBtn.addEventListener('click', () => {
             currentIndex = (currentIndex - 1 + itemCount) % itemCount;
             updateCarousel();
-            resetAutoPlay();
         });
-
+        
         // 自动轮播
-        function startAutoPlay() {
-            // 先清除之前的计时器
-            pauseAutoPlay();
-            
-            // 设置新的计时器
-            autoPlayInterval = setInterval(() => {
-                currentIndex = (currentIndex + 1) % itemCount;
-                updateCarousel();
-            }, 5000); // 每5秒切换一次
-        }
-
-        // 暂停自动轮播
-        function pauseAutoPlay() {
-            clearInterval(autoPlayInterval);
-        }
-
-        // 重置自动轮播（点击按钮后重新开始计时）
-        function resetAutoPlay() {
-            pauseAutoPlay();
-            startAutoPlay();
-        }
-
-        // 初始化轮播图
-        document.addEventListener('DOMContentLoaded', initCarousel);
-   </script>
+        setInterval(() => {
+            currentIndex = (currentIndex + 1) % itemCount;
+            updateCarousel();
+        }, 5000);
+        
+        // Tab切换功能
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.tab-content');
+        
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const tabId = btn.getAttribute('data-tab');
+                
+                // 移除所有active类
+                tabBtns.forEach(b => b.classList.remove('active'));
+                tabContents.forEach(c => c.classList.remove('active'));
+                
+                // 添加active类到当前tab
+                btn.classList.add('active');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+    </script>
 </body>
+</html>

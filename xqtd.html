@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/exam.css">
-    <title>CUIT 6008 Gaming - 崩坏星穹铁道 - 翁法罗斯的使命</title>
+    <title>CUIT 6008 Gaming - 崩坏星穹铁道</title>
     <style>
         * {
             margin: 0;
@@ -17,13 +16,70 @@
             background-color: #0f0f1a;
             color: #e0e0e0;
             line-height: 1.6;
+            padding-top: 70px;
         }
-        
+
+        .navbar {
+            background-color: rgba(26, 26, 46, 0.9);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            backdrop-filter: blur(5px);
+            border-bottom: 1px solid rgba(233, 69, 96, 0.3);
+        }
+
+        .site-name {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #e94560;
+            text-shadow: 0 0 5px rgba(233, 69, 96, 0.5);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .nav-links a {
+            color: #a0a0c0;
+            text-decoration: none;
+            transition: all 0.3s;
+            font-size: 1.1rem;
+            padding: 0.3rem 0;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: #4cc9f0;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #4cc9f0;
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
         header {
             background: linear-gradient(to right, #1a1a2e, #16213e);
-            padding: 20px 0;
+            padding: 80px 0 20px;
             text-align: center;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+            margin-top: -70px;
         }
         
         h1 {
@@ -204,12 +260,21 @@
             border: none;
         }
         
+        .cuit-logo {
+            width: 100%;
+            max-width: 1000px;
+            margin: 20px auto;
+            display: block;
+            border-radius: 8px;
+        }
+        
         footer {
             text-align: center;
             padding: 30px;
             background: #1a1a2e;
             margin-top: 50px;
             color: #a0a0a0;
+            border-top: 1px solid rgba(233, 69, 96, 0.3);
         }
         
         @keyframes fadeIn {
@@ -229,10 +294,20 @@
             .carousel {
                 height: 300px;
             }
+            
+            .nav-links {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+            
+            .site-name {
+                font-size: 1.2rem;
+            }
         }
     </style>
 </head>
 <body>
+    <!-- 导航栏 -->
     <div class="navbar">
         <div class="site-name">6008 Gaming</div>
         <div class="nav-links">
@@ -244,17 +319,19 @@
             <a href="sekiro.html">黑魂</a>
         </div>
     </div>
-    <header style="margin-top: 50px;">
+    
+    <!-- 崩坏星穹铁道内容 -->
+    <header>
         <h1>崩坏星穹铁道</h1>
         <div class="subtitle">翁法罗斯的危机与使命</div>
     </header>
     
     <div class="carousel-container">
         <div class="carousel">
-            <img src="images/阿格莱雅.jpg" alt="阿格莱雅">
-            <img src="images/万敌.jpg" alt="万敌">
-            <img src="images/遐蝶.jpeg" alt="遐蝶">
-            <img src="images/赛飞儿.jpg" alt="赛飞儿">
+            <img src="images\阿格莱雅.jpg" alt="阿格莱雅">
+            <img src="images\万敌.jpg" alt="万敌">
+            <img src="images\遐蝶.jpeg" alt="遐蝶">
+            <img src="images\赛飞儿.jpg" alt="赛飞儿">
         </div>
         <button class="carousel-btn" id="prevBtn">❮</button>
         <button class="carousel-btn" id="nextBtn">❯</button>
@@ -263,7 +340,7 @@
     <div class="onfaros-section">
         <h2>翁法罗斯的危机</h2>
         <p>翁法罗斯的历史是一部轮回的史诗。泰坦首先诞生，创造世界和万物，但是自灾厄三泰坦降临后，翁法罗斯各城邦会开始遭受黑潮威胁。</p>
-        <p>翁法罗斯（AMPHOREUS），游戏《崩坏：星穹铁道》中的世界，别称“永恒之地”，一个开拓星神阿基维利未曾到访，宇宙中大多数人不知其存在的世界 [1]，一个由智识，记忆，毁灭三重命途交汇的地方，它的历史悠久且充满挑战。这个世界的居民对外部世界一无所知，他们信仰的「泰坦」是他们的「土著神明」。</p>
+        <p>翁法罗斯（AMPHOREUS），游戏《崩坏：星穹铁道》中的世界，别称"永恒之地"，一个开拓星神阿基维利未曾到访，宇宙中大多数人不知其存在的世界，一个由智识，记忆，毁灭三重命途交汇的地方，它的历史悠久且充满挑战。这个世界的居民对外部世界一无所知，他们信仰的「泰坦」是他们的「土著神明」。</p>
         
         <h2 style="margin-top: 30px;">人民的使命</h2>
         <p>为了平定黑潮，名为黄金裔的英雄会弑杀泰坦、回收它们的火种，进而晋升半神，行使泰坦神权。等到十二枚火种都被回收后，翁法罗斯会经历再创世，时间线重新开始，前世的负世半神会以自己的记忆再造翁法罗斯，而前世的半神会成为现世的泰坦。</p>
@@ -282,11 +359,10 @@
             <p>感谢你一直以来的辛勤付出。</p>
             
             <h3>神权：黄金之茧（浪漫）</h3>
-            <p>“金织”阿格莱雅，背负“浪漫”火种的黄金裔，召集世间英雄，带领他们再度踏上漫长的征程——击落众神，归还神火，予以几近覆灭的翁法罗斯新生</p>
+            <p>"金织"阿格莱雅，背负"浪漫"火种的黄金裔，召集世间英雄，带领他们再度踏上漫长的征程——击落众神，归还神火，予以几近覆灭的翁法罗斯新生</p>
             
             <h3>背景故事</h3>
-            <p>出征的战士回望奥赫玛，诸邦公民仰赖的圣城。正如城中诗人唱诵的那般“壮美无比，仁慈无边”。而圣城之美一如阿格莱雅。她是奥赫玛的改衣师，纺织金丝之人。她的双剪与双尺，
-                胜过最巧的衣匠，勾勒出神塑般的曼妙形体，她不喜欢奉承的话语，还有委迤的场合。浪漫之神的金丝，如今是阿格莱雅的手眼，世间所有的色彩，混着人们心中的底色，一一向她扑面。唯独她追求的一桩难事——是将奥赫玛的命运，裁织出天衣无缝的结果</p>
+            <p>出征的战士回望奥赫玛，诸邦公民仰赖的圣城。正如城中诗人唱诵的那般"壮美无比，仁慈无边"。而圣城之美一如阿格莱雅。她是奥赫玛的改衣师，纺织金丝之人。她的双剪与双尺，胜过最巧的衣匠，勾勒出神塑般的曼妙形体，她不喜欢奉承的话语，还有委迤的场合。浪漫之神的金丝，如今是阿格莱雅的手眼，世间所有的色彩，混着人们心中的底色，一一向她扑面。唯独她追求的一桩难事——是将奥赫玛的命运，裁织出天衣无缝的结果</p>
         </div>
         
         <div id="wandi" class="tab-content">
@@ -294,10 +370,10 @@
             <p>我是悬锋的王储迈德漠斯，亦是奥赫玛的战士万敌。若想了解更多，便观我一战，或与我一战。</p>
             
             <h3>神权：天谴之矛（纷争）</h3>
-            <p>万敌的内心对悬锋人“宁战死 毋荣归”的宿命，产生了更为深刻的动摇。悬锋人以战死沙场作为最高的荣耀，即便已背离家乡，他们一直期待着灭敌登基为王，带领他们重返悬锋荣光</p>
+            <p>万敌的内心对悬锋人"宁战死 毋荣归"的宿命，产生了更为深刻的动摇。悬锋人以战死沙场作为最高的荣耀，即便已背离家乡，他们一直期待着灭敌登基为王，带领他们重返悬锋荣光</p>
             
             <h3>背景故事</h3>
-            <p>那沉入迷雾的悬锋，纷乱与战争之城。它的王室流着弑亲的血脉，它的神明以灾厄为名。不死的迈德漠斯，离群的狮子，逐猎“纷争”火种的黄金裔。你要忍受万死，浴血还乡，孤身背负疯狂的宿命——弑王成王，弑神登神。征战的铁蹄踏遍荒野，终归要沾上故乡的血。</p>
+            <p>那沉入迷雾的悬锋，纷乱与战争之城。它的王室流着弑亲的血脉，它的神明以灾厄为名。不死的迈德漠斯，离群的狮子，逐猎"纷争"火种的黄金裔。你要忍受万死，浴血还乡，孤身背负疯狂的宿命——弑王成王，弑神登神。征战的铁蹄踏遍荒野，终归要沾上故乡的血。</p>
         </div>
         
         <div id="xiadie" class="tab-content">
@@ -305,11 +381,10 @@
             <p>你所停留的地方是温柔的花海。</p>
             
             <h3>神权：灰黯之手（死亡）</h3>
-            <p>奥赫玛的“入殓师”，聆听亡者之声，解译泰坦言语 [10]。冥河的女儿遐蝶，寻索“死亡”火种的黄金裔</p>
+            <p>奥赫玛的"入殓师"，聆听亡者之声，解译泰坦言语。冥河的女儿遐蝶，寻索"死亡"火种的黄金裔</p>
             
             <h3>背景故事</h3>
-            <p>哀地里亚的督战圣女，给予生者仁慈的死亡，如今为寻求“死亡”的意义而游遍生者的大地，逆流而上，跨越生死的界限，万物归于寂灭的冥界也在呼唤她 [4]。
-                盛世倾颓，旧曰不复，纵是死亡，亦要寻求归处。遐蝶行过哀地里亚，掌心魂灵哀鸣，其声未曾怀恨。 荣耀是否与死亡等价一一为寻求一答，她再未止步。旅途漫长，启程千年。她仍未知晓，自身应葬何处</p>
+            <p>哀地里亚的督战圣女，给予生者仁慈的死亡，如今为寻求"死亡"的意义而游遍生者的大地，逆流而上，跨越生死的界限，万物归于寂灭的冥界也在呼唤她。盛世倾颓，旧曰不复，纵是死亡，亦要寻求归处。遐蝶行过哀地里亚，掌心魂灵哀鸣，其声未曾怀恨。 荣耀是否与死亡等价一一为寻求一答，她再未止步。旅途漫长，启程千年。她仍未知晓，自身应葬何处</p>
         </div>
         
         <div id="safir" class="tab-content">
@@ -320,21 +395,19 @@
             <p>赛飞儿是一名虚无命途的量子属性角色，作为诡计之半神，赛飞儿也擅长运用一些小小诡计，来帮助自己战胜敌人。</p>
             
             <h3>背景故事</h3>
-            <p>赛飞儿是最早加入逐火之旅的黄金裔之一，在很久以前就接过了诡计的神权，不过相比于其他尽职尽责的老前辈，她却总是神出鬼没，来去如风，人经常不在奥赫玛，但奥赫玛总有她的传说 [2]。
-赛飞儿的鬼点子很多，常常让人被骗了还乖乖替她数钱。尽管同为半神，与阿格莱雅与缇宝不同，赛飞儿似乎没有那么关心逐火之旅和再创世，比如说，她更想过更自由潇洒，随心所欲的生活 [2]。</p>
+            <p>赛飞儿是最早加入逐火之旅的黄金裔之一，在很久以前就接过了诡计的神权，不过相比于其他尽职尽责的老前辈，她却总是神出鬼没，来去如风，人经常不在奥赫玛，但奥赫玛总有她的传说。赛飞儿的鬼点子很多，常常让人被骗了还乖乖替她数钱。尽管同为半神，与阿格莱雅与缇宝不同，赛飞儿似乎没有那么关心逐火之旅和再创世，比如说，她更想过更自由潇洒，随心所欲的生活。</p>
         </div>
     </div>
     
     <div class="video-container">
         <h2>翁法罗斯宣传视频</h2>
         <div class="video-wrapper">
-            <!-- 这里替换为实际的崩坏星穹铁道视频嵌入代码 -->
             <iframe src="https://player.bilibili.com/player.html?isOutside=true&aid=113520163229242&bvid=BV1GeUUYREXy&cid=26900431462&p=2" scrolling="no" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
         </div>
     </div>
     
     <footer>
-        <p>© 2024 - 2025 CUIT 6008 | 保留所有权利</p>
+		<p>© 2024 - 2025 CUIT 6008 | 保留所有权利</p>
     </footer>
     
     <script>
